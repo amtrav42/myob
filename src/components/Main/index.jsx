@@ -22,11 +22,12 @@ class Main extends Component {
                   </div>
                   <div className="superRateBox">
                     <div className="percentSign">%</div>
-                    <input type="text" name="superRate" placeholder="Super Rate"/>
+                    <input type="text" className="superRate_input" name="superRate" placeholder="Super Rate"/>
                   </div>
                 </div>
               </div>
             </form>
+            <button>Generate Payslip</button>
           </div>
         </div>
       </main>
