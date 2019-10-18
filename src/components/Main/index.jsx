@@ -11,13 +11,13 @@ class Main extends Component {
             <form>
               <div className="formBoxes">
                 <div className="nameBoxes">
-                  <input type="text" name="firstName" placeholder="Firstname"/>
-                  <input type="text" name="lastName" placeholder="Lastname"/>
+                  <input type="text" className="firstName" placeholder="Firstname"/>
+                  <input type="text" className="lastName" placeholder="Lastname"/>
                 </div>
                 <div className="paymentBoxes">
                   <div className="annualSalaryBox">
                     <div className="dollarSign">$</div>
-                    <input type="text" name="annualSalary" placeholder="Annual Salary"/>
+                    <input type="text" className="annualSalary" placeholder="Annual Salary"/>
                     <div className="zeros"> .00</div>
                   </div>
                   <div className="superRateBox">

@@ -1,10 +1,21 @@
-
+//SASS
+$font-stack: 'Roboto', sans-serif;
+//Global Rules
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-stack;
+  font-size: 14px;
 }
+// Containing Boxes for placement on page and placement relative
 .mainWrapper{
   display: flex;
   justify-content: center;
+}
+.nameBoxes{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 .paymentBoxes{
   display: grid;
@@ -22,21 +33,33 @@ body{
   justify-content: center;
   align-items: center;
 }
-.nameBoxes{
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 10px;
-  justify-content: center;
-  align-items: center;
+//Box Styling
+.firstName{
+  border-radius: 4px;
+  border: 1px solid lightgrey;
+  padding: 8px;
+}
+.lastName{
+  border-radius: 4px;
+  border: 1px solid lightgrey;
+  padding: 8px;
+}
+.annualSalary{
+  border-radius: 4px;
+  border: 1px solid lightgrey;
+  padding: 8px;
 }
 .superRate_input{
   width: 100%;
   border-radius: 4px;
   border: 1px solid lightgrey;
-  padding: 5px;
+  padding: 8px;
 }
+
+
 input[type="text"] {
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-stack;
+  font-size: 1rem;
 }
 button {
   background-color: #0063be;
@@ -46,6 +69,6 @@ button {
   text-align: center;
   font-weight: bolder;
   display: inline-block;
-  font-size: 18px;
   border-radius: 4px;
+  font-size: 1rem;
 }
