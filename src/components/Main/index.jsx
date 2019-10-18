@@ -16,18 +16,20 @@ class Main extends Component {
                 </div>
                 <div className="paymentBoxes">
                   <div className="annualSalaryBox">
-                    <div className="dollarSign">$</div>
+                    <div className="greyBox dollarSign">$</div>
                     <input type="text" className="annualSalary" placeholder="Annual Salary"/>
-                    <div className="zeros"> .00</div>
+                    <div className="greyBox zeros"> .00</div>
                   </div>
                   <div className="superRateBox">
-                    <div className="percentSign">%</div>
+                    <div className="greyBox percentSign">%</div>
                     <input type="text" className="superRate_input" name="superRate" placeholder="Super Rate"/>
                   </div>
                 </div>
               </div>
             </form>
+            <div className="formActions">
             <button>Generate Payslip</button>
+            </div>
           </div>
         </div>
       </main>

@@ -1,9 +1,19 @@
 //SASS
 $font-stack: 'Roboto', sans-serif;
-//Global Rules
+$padding-boxes: 12px;
+//Global Rules and browser reset
 body{
   font-family: $font-stack;
   font-size: 14px;
+}
+h2{
+  font-size: 2rem;
+  margin: 15px 0px;
+}
+div{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 // Containing Boxes for placement on page and placement relative
 .mainWrapper{
@@ -12,14 +22,14 @@ body{
 }
 .nameBoxes{
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   justify-content: center;
   align-items: center;
 }
 .paymentBoxes{
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   margin: 15px 0px;
   justify-content: center;
@@ -33,33 +43,50 @@ body{
   justify-content: center;
   align-items: center;
 }
+.formActions{
+  display: flex;
+  justify-content: flex-end;
+}
 //Box Styling
 .firstName{
   border-radius: 4px;
   border: 1px solid lightgrey;
-  padding: 8px;
+  padding: $padding-boxes;
 }
 .lastName{
   border-radius: 4px;
   border: 1px solid lightgrey;
-  padding: 8px;
+  padding: $padding-boxes;
 }
 .annualSalary{
-  border-radius: 4px;
   border: 1px solid lightgrey;
-  padding: 8px;
+  padding: $padding-boxes;
 }
 .superRate_input{
   width: 100%;
-  border-radius: 4px;
+  border-radius: 0px 4px 4px 0px;
   border: 1px solid lightgrey;
-  padding: 8px;
+  padding: $padding-boxes;
 }
-
-
 input[type="text"] {
   font-family: $font-stack;
   font-size: 1rem;
+}
+.greyBox{
+  background: lightgrey;
+  font-size:  1rem;
+  text-align: center;
+  padding: 12px 20px;
+  height: 45px;
+}
+.dollarSign{
+  border-radius: 4px 0px 0px 4px;
+}
+.zeros{
+  border-radius: 0px 4px 4px 0px;
+}
+.percentSign{
+  border-radius: 4px 0px 0px 4px;
 }
 button {
   background-color: #0063be;
@@ -71,4 +98,6 @@ button {
   display: inline-block;
   border-radius: 4px;
   font-size: 1rem;
+  margin: 0;
+  cursor: pointer;
 }
