@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "./styles.scss";
 
 class Main extends Component {
+  handleSubmit(){
+    console.log("you clicked the button!");
+  }
   render(){
     return (
       <main>
@@ -28,7 +31,7 @@ class Main extends Component {
               </div>
             </form>
             <div className="formActions">
-            <button>Generate Payslip</button>
+            <button onClick={() => this.handleSubmit()}>Generate Payslip</button>
             </div>
           </div>
         </div>
