@@ -9,14 +9,30 @@ class Main extends Component {
       firstName: "",
       lastName: "",
       salary: 0,
-      super: 0,
+      superRate: 0,
+      grossIncome: 0,
+      incomeTax: 0,
+      netIncome: 0,
+      superPaid: 0,
+      pay: 0,
+      hasFormSubmitted: false,
     };
   }
-  //log clicking the button
+  //link to button and destructure the state
   handleSubmit(){
-    console.log(this.state);
+    //calculate gross income
+    const { salary, superRate } = this.state;
+    const grossIncomeCalc = Math.round(salary/12);
+    //update state with calculations
+    this.setState({
+      grossIncome: grossIncomeCalc,
+      hasFormSubmitted: true,
+    });
   }
+
   render(){
+    const { hasFormSubmitted, grossIncome, firstName, lastName } = this.state;
+    console.log(this.state);
     return (
       <main>
         <div className="mainWrapper">
@@ -36,7 +52,7 @@ class Main extends Component {
                   </div>
                   <div className="superRateBox">
                     <div className="greyBox percentSign">%</div>
-                    <input onChange={(e) => this.setState({super: e.target.value})} type="text" className="superRate_input" name="superRate" placeholder="Super Rate"/>
+                    <input onChange={(e) => this.setState({superRate: e.target.value})} type="text" className="superRate_input" name="superRate" placeholder="Super Rate"/>
                   </div>
                 </div>
               </div>
@@ -45,6 +61,14 @@ class Main extends Component {
             <button onClick={() => this.handleSubmit()}>Generate Payslip</button>
             </div>
           </div>
+            {hasFormSubmitted && (
+              <div className="reportWrapper">
+                <div>{firstName} {lastName} earns</div>
+                <div>Gross Income</div>
+                <div>${grossIncome}</div>
+                <div>per month</div>
+              </div>
+            )}
         </div>
       </main>
     );
