@@ -2,8 +2,19 @@ import React, { Component } from "react";
 import "./styles.scss";
 
 class Main extends Component {
+  constructor(){
+    super();
+    //set up local state
+    this.state = {
+      firstName: "",
+      lastName: "",
+      salary: 0,
+      super: 0,
+    };
+  }
+  //log clicking the button
   handleSubmit(){
-    console.log("you clicked the button!");
+    console.log(this.state);
   }
   render(){
     return (
@@ -14,18 +25,18 @@ class Main extends Component {
             <form>
               <div className="formBoxes">
                 <div className="nameBoxes">
-                  <input type="text" className="firstName" placeholder="Firstname"/>
-                  <input type="text" className="lastName" placeholder="Lastname"/>
+                  <input onChange={(e) => this.setState({firstName: e.target.value})} type="text" className="firstName" placeholder="Firstname"/>
+                  <input onChange={(e) => this.setState({lastName: e.target.value})} type="text" className="lastName" placeholder="Lastname"/>
                 </div>
                 <div className="paymentBoxes">
                   <div className="annualSalaryBox">
                     <div className="greyBox dollarSign">$</div>
-                    <input type="text" className="annualSalary" placeholder="Annual Salary"/>
+                    <input onChange={(e) => this.setState({salary: e.target.value})} type="text" className="annualSalary" placeholder="Annual Salary"/>
                     <div className="greyBox zeros"> .00</div>
                   </div>
                   <div className="superRateBox">
                     <div className="greyBox percentSign">%</div>
-                    <input type="text" className="superRate_input" name="superRate" placeholder="Super Rate"/>
+                    <input onChange={(e) => this.setState({super: e.target.value})} type="text" className="superRate_input" name="superRate" placeholder="Super Rate"/>
                   </div>
                 </div>
               </div>
