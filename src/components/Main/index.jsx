@@ -82,38 +82,40 @@ class Main extends Component {
                   <h2>Payslip</h2>
                   <div><h3>{firstName} {lastName}</h3></div>
                   <table>
-                    <tr>
-                      <td>Pay Date</td>
-                      <td>30th March 2013</td>
-                    </tr>
-                    <tr>
-                      <td>Pay Frequency</td>
-                      <td>Monthly</td>
-                    </tr>
-                    <tr>
-                      <td>Annual Income</td>
-                      <td>${salary}</td>
-                    </tr>
-                    <tr>
-                      <td>Gross Income</td>
-                      <td>${grossIncome}</td>
-                    </tr>
-                    <tr>
-                      <td>Income Tax</td>
-                      <td>${incomeTax}</td>
-                    </tr>
-                    <tr>
-                      <td>Net Income</td>
-                      <td>${netIncome}</td>
-                    </tr>
-                    <tr>
-                      <td>Super</td>
-                      <td>${superPaid}</td>
-                    </tr>
-                    <tr>
-                      <td>Pay</td>
-                      <td>${pay}</td>
-                    </tr>
+                    <tbody>
+                      <tr>
+                        <td>Pay Date</td>
+                        <td>30th March 2013</td>
+                      </tr>
+                      <tr>
+                        <td>Pay Frequency</td>
+                        <td>Monthly</td>
+                      </tr>
+                      <tr>
+                        <td>Annual Income</td>
+                        <td>${salary}</td>
+                      </tr>
+                      <tr>
+                        <td>Gross Income</td>
+                        <td>${grossIncome}</td>
+                      </tr>
+                      <tr>
+                        <td>Income Tax</td>
+                        <td>${incomeTax}</td>
+                      </tr>
+                      <tr>
+                        <td>Net Income</td>
+                        <td>${netIncome}</td>
+                      </tr>
+                      <tr>
+                        <td>Super</td>
+                        <td>${superPaid}</td>
+                      </tr>
+                      <tr>
+                        <td>Pay</td>
+                        <td>${pay}</td>
+                      </tr>
+                    </tbody>
                   </table>
                   <button>Pay</button>
                 </div>
