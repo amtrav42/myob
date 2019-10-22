@@ -118,8 +118,8 @@ class Main extends Component {
                     </tbody>
                   </table>
                   <div className="formActions">
-                  <button>Pay</button>
-                </div>
+                    <button className="payButton">Pay</button>
+                  </div>
                 </div>
               </div>
             )}
