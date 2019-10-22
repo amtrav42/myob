@@ -43,7 +43,7 @@ class Main extends Component {
   }
 
   render(){
-    const { hasFormSubmitted, superPaid, grossIncome, firstName, lastName } = this.state;
+    const { hasFormSubmitted, superPaid, grossIncome, firstName, lastName, pay, netIncome, incomeTax, salary } = this.state;
     console.log(this.state);
     return (
       <main>
@@ -79,12 +79,43 @@ class Main extends Component {
             {hasFormSubmitted && (
               <div className="reportWrapper">
                 <div className="report">
-                  <div>{firstName} {lastName} earns</div>
-                  <div>Gross Income</div>
-                  <div>${grossIncome}</div>
-                  <div>per month</div>
-                  <div>${superPaid}</div>
-                  <div>in super</div>
+                  <h2>Payslip</h2>
+                  <div><h3>{firstName} {lastName}</h3></div>
+                  <table>
+                    <tr>
+                      <td>Pay Date</td>
+                      <td>30th March 2013</td>
+                    </tr>
+                    <tr>
+                      <td>Pay Frequency</td>
+                      <td>Monthly</td>
+                    </tr>
+                    <tr>
+                      <td>Annual Income</td>
+                      <td>${salary}</td>
+                    </tr>
+                    <tr>
+                      <td>Gross Income</td>
+                      <td>${grossIncome}</td>
+                    </tr>
+                    <tr>
+                      <td>Income Tax</td>
+                      <td>${incomeTax}</td>
+                    </tr>
+                    <tr>
+                      <td>Net Income</td>
+                      <td>${netIncome}</td>
+                    </tr>
+                    <tr>
+                      <td>Super</td>
+                      <td>${superPaid}</td>
+                    </tr>
+                    <tr>
+                      <td>Pay</td>
+                      <td>${pay}</td>
+                    </tr>
+                  </table>
+                  <button>Pay</button>
                 </div>
               </div>
             )}
