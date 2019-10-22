@@ -106,11 +106,12 @@ button {
   margin: 0;
   cursor: pointer;
 }
-//table Styling
+//wrapping div
 .reportWrapper{
   display: flex;
   justify-content: center;
 }
+//table styling
 table {
   font-family: $font-stack;
   font-size: 1rem;
