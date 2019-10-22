@@ -93,31 +93,33 @@ class Main extends Component {
                       </tr>
                       <tr>
                         <td>Annual Income</td>
-                        <td>${salary}</td>
+                        <td>${salary}.00</td>
                       </tr>
                       <tr>
                         <td>Gross Income</td>
-                        <td>${grossIncome}</td>
+                        <td>${grossIncome}.00</td>
                       </tr>
                       <tr>
                         <td>Income Tax</td>
-                        <td>${incomeTax}</td>
+                        <td>${incomeTax}.00</td>
                       </tr>
                       <tr>
                         <td>Net Income</td>
-                        <td>${netIncome}</td>
+                        <td>${netIncome}.00</td>
                       </tr>
                       <tr>
                         <td>Super</td>
-                        <td>${superPaid}</td>
+                        <td>${superPaid}.00</td>
                       </tr>
                       <tr>
                         <td>Pay</td>
-                        <td>${pay}</td>
+                        <td>${pay}.00</td>
                       </tr>
                     </tbody>
                   </table>
+                  <div className="formActions">
                   <button>Pay</button>
+                </div>
                 </div>
               </div>
             )}

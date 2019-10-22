@@ -107,6 +107,24 @@ button {
   cursor: pointer;
 }
 //table Styling
+.reportWrapper{
+  display: flex;
+  justify-content: center;
+}
+table {
+  font-family: $font-stack;
+  font-size: 1rem;
+  border-collapse: collapse;
+  width: 650px;
+}
+td {
+  padding: 15px;
+  margin: 15px;
+  border-bottom: 1px solid lightgrey;
+}
 table td:first-child {
   font-weight: bold;
+}
+tr:nth-child(odd) {
+  background-color: WhiteSmoke;
 }
