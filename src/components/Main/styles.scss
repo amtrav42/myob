@@ -1,4 +1,5 @@
 //SASS
+//font is assumed as exact match could not be found
 $font-stack: 'Roboto', sans-serif;
 $padding-boxes: 12px;
 //Global Rules and browser reset
@@ -89,6 +90,7 @@ input[type="text"] {
   border-radius: 4px 0px 0px 4px;
 }
 button {
+  // colour is assumed as exact match could not be found
   background-color: #0063be;
   border: none;
   color: white;

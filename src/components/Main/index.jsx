@@ -20,23 +20,36 @@ class Main extends Component {
   }
   //link to button and destructure the state
   handleSubmit(){
-    //calculate gross income
     const { salary, superRate } = this.state;
-    const grossIncomeCalc = Math.round(salary/12);
+    //calculate gross income
+    const grossIncomeCalc = Math.floor(salary/12);
+    //calculate super to be paid
+    const superCalc = Math.floor(grossIncomeCalc*(superRate/100));
+    //calculate income tax ONLY FOR PAY BETWEEN 37001 and 80000
+    const incomeTaxCalc = Math.ceil((3572+(salary-37000)*0.325)/12);
+    //calculate net income
+    const netIncomeCalc = grossIncomeCalc - incomeTaxCalc;
+    //calculate pay
+    const payCalc = netIncomeCalc - superCalc;
     //update state with calculations
     this.setState({
       grossIncome: grossIncomeCalc,
+      superPaid: superCalc,
+      incomeTax: incomeTaxCalc,
+      netIncome: netIncomeCalc,
+      pay: payCalc,
       hasFormSubmitted: true,
     });
   }
 
   render(){
-    const { hasFormSubmitted, grossIncome, firstName, lastName } = this.state;
+    const { hasFormSubmitted, superPaid, grossIncome, firstName, lastName } = this.state;
     console.log(this.state);
     return (
       <main>
         <div className="mainWrapper">
           <div className="formWrapper">
+            {/* form to collect the required information from the user */}
             <h2>Employee Info</h2>
             <form>
               <div className="formBoxes">
@@ -61,15 +74,20 @@ class Main extends Component {
             <button onClick={() => this.handleSubmit()}>Generate Payslip</button>
             </div>
           </div>
+        </div>
+          {/* once form has been submitted this will show */}
             {hasFormSubmitted && (
               <div className="reportWrapper">
-                <div>{firstName} {lastName} earns</div>
-                <div>Gross Income</div>
-                <div>${grossIncome}</div>
-                <div>per month</div>
+                <div className="report">
+                  <div>{firstName} {lastName} earns</div>
+                  <div>Gross Income</div>
+                  <div>${grossIncome}</div>
+                  <div>per month</div>
+                  <div>${superPaid}</div>
+                  <div>in super</div>
+                </div>
               </div>
             )}
-        </div>
       </main>
     );
   }
